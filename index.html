@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploit Tutorial</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
-            transition: background-color 0.4s, color 0.4s; /* Smooth transition for dark mode */
+            background-color: #121212;
+            color: #fff;
+            transition: background-color 0.4s, color 0.4s;
         }
 
         .container {
@@ -53,8 +52,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ccc;
-            transition: .4s; /* Smooth transition for slider */
+            background-color: #666;
+            transition: .4s;
         }
 
         .slider:before {
@@ -63,23 +62,24 @@
             width: 26px;
             height: 26px;
             background-color: #fff;
+            border-radius: 50%;
             transition: .4s;
         }
 
         input:checked + .slider {
-            background-color: #2196F3; /* Slider color when checked */
+            background-color: #2196F3;
         }
 
         input:checked + .slider:before {
-            transform: translateX(26px); /* Move slider when checked */
+            transform: translateX(26px);
         }
 
         .slider.round {
-            border-radius: 34px; /* Rounded slider */
+            border-radius: 34px;
         }
 
         .slider.round:before {
-            border-radius: 50%; /* Rounded handle */
+            border-radius: 50%;
         }
 
         .content {
@@ -106,12 +106,12 @@
         }
 
         a {
-            color: #2196F3; /* Link color */
+            color: #BB86FC;
             text-decoration: none;
         }
 
         a:hover {
-            text-decoration: underline; /* Hover effect for links */
+            text-decoration: underline;
         }
 
         .footer {
@@ -120,22 +120,21 @@
         }
 
         .dark-theme {
-            background-color: #121212; /* Dark theme background color */
-            color: #fff; /* Dark theme text color */
+            background-color: #121212;
+            color: #fff;
         }
 
         .dark-theme a {
-            color: #BB86FC; /* Dark theme link color */
+            color: #BB86FC;
         }
-
     </style>
 </head>
-<body>
+<body class="dark-theme">
     <div class="container">
         <header class="header">
             <h1>Exploit Tutorial</h1>
             <label class="theme-toggle">
-                <input type="checkbox" id="theme-switch">
+                <input type="checkbox" id="theme-switch" checked>
                 <span class="slider round"></span>
             </label>
         </header>
@@ -204,10 +203,10 @@
     </div>
 
     <script>
-	    const themeSwitch = document.getElementById('theme-switch');
-	    themeSwitch.addEventListener('change', () => {
-	        document.body.classList.toggle('dark-theme'); /* Toggle dark theme on/off */
-	    });
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-theme');
+        });
     </script>
 </body>
 </html>
