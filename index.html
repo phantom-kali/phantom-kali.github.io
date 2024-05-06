@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploit Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.4s, color 0.4s; /* Smooth transition for dark mode */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .theme-toggle {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .theme-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s; /* Smooth transition for slider */
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            width: 26px;
+            height: 26px;
+            background-color: #fff;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3; /* Slider color when checked */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px); /* Move slider when checked */
+        }
+
+        .slider.round {
+            border-radius: 34px; /* Rounded slider */
+        }
+
+        .slider.round:before {
+            border-radius: 50%; /* Rounded handle */
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #2196F3; /* Link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Hover effect for links */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dark-theme {
+            background-color: #121212; /* Dark theme background color */
+            color: #fff; /* Dark theme text color */
+        }
+
+        .dark-theme a {
+            color: #BB86FC; /* Dark theme link color */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Exploit Tutorial</h1>
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+        </header>
+
+        <main class="content">
+            <p>Welcome to my online profile!</p>
+
+            <section class="about">
+                <h2>About Me</h2>
+                <ul>
+                    <li>Nickname: Exploit Tutorial</li>
+                    <li>Email: <a href="mailto:fideleliudclimax@gmail.com">fideleliudclimax@gmail.com</a></li>
+                    <li>HackerRank: <a href="https://www.hackerrank.com/profile/fideleliudclimax">Hackerrank Profile</a></li>
+                    <li>Education: Self-taught, BSc. Science (computer security and Forensics)</li>
+                    <li>Languages: English (proficient), Kiswahili (communicable)</li>
+                </ul>
+            </section>
+
+            <section class="skills">
+                <h2>Technical Skills</h2>
+                <h3>Major Languages</h3>
+                <ul>
+                    <li>Python</li>
+                </ul>
+                <h3>Secondary Languages</h3>
+                <ul>
+                    <li>Java</li>
+                </ul>
+                <h3>Other Languages</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                </ul>
+                <h3>Frameworks</h3>
+                    <ul>
+                        <li>Flask</li>
+                        <li>Weka</li>
+                    </ul>
+                <h3>Environments</h3>
+                    <ul>
+                        <li>Linux (Primary)</li>
+                        <li>Windows (Secondary)</li>
+                    </ul>
+            </section>
+
+            <section class="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Java Certificate: <a href="https://www.hackerrank.com/certificates/9dfe08f2f268" target="_blank">View Certificate</a></li>
+                    <li>Python Certificate: <a href="https://www.hackerrank.com/certificates/e2e89153ba63" target="_blank">View Certificate</a></li>
+                </ul>
+            </section>
+
+            <section class="activities">
+                <h2>Fun Activities</h2>
+                <ul>
+                    <li>Competitive Programming on HackerRank</li>
+                    <li>Freelancing (Telegram/WhatsApp)</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Feel free to connect with me on HackerRank or reach out via email for any inquiries.</p>
+        </footer>
+    </div>
+
+    <script>
+	    const themeSwitch = document.getElementById('theme-switch');
+	    themeSwitch.addEventListener('change', () => {
+	        document.body.classList.toggle('dark-theme'); /* Toggle dark theme on/off */
+	    });
+    </script>
+</body>
+</html>
