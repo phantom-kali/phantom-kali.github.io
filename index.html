@@ -6,10 +6,10 @@
     <title>Exploit Tutorial</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
+            background-color: #1f1f1f;
             color: #fff;
             transition: background-color 0.4s, color 0.4s;
         }
@@ -28,7 +28,7 @@
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0;
         }
 
@@ -54,16 +54,18 @@
             bottom: 0;
             background-color: #666;
             transition: .4s;
+            border-radius: 34px;
         }
 
         .slider:before {
             position: absolute;
             content: "";
-            width: 26px;
-            height: 26px;
+            width: 30px;
+            height: 30px;
             background-color: #fff;
             border-radius: 50%;
             transition: .4s;
+            transform: translateX(4px);
         }
 
         input:checked + .slider {
@@ -74,25 +76,17 @@
             transform: translateX(26px);
         }
 
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
-
         .content {
             text-align: center;
         }
 
         section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            margin-bottom: 15px;
         }
 
         ul {
@@ -102,7 +96,8 @@
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
         a {
@@ -120,7 +115,7 @@
         }
 
         .dark-theme {
-            background-color: #121212;
+            background-color: #1f1f1f;
             color: #fff;
         }
 
@@ -135,7 +130,7 @@
             <h1>Exploit Tutorial</h1>
             <label class="theme-toggle">
                 <input type="checkbox" id="theme-switch" checked>
-                <span class="slider round"></span>
+                <span class="slider"></span>
             </label>
         </header>
 
